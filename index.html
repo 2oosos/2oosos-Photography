@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>2oosos - Photography</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Particles.js CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+</head>
+<body>
+  <div id="scrollProgress"></div>
+  <div id="particles-js"></div>
+
+  <header class="header">
+    <div class="nav-container">
+      <h1 class="logo">📷 2oosos</h1>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#preset">Preset</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="toggle-wrapper">
+        <div class="theme-select">
+          <select id="themePicker">
+          <option value="default">🌞 Default</option>
+          <option value="neon">🌌 Neon</option>
+          <option value="earth">🌿 Earth</option>
+          <option value="dark">🌙 Dark</option>
+          <option value="analog">🎞️ Analog</option>
+          <option value="pastel">🌸 Pastel</option>
+          <option value="crt">📺 2000s TV</option>
+        </select>
+        </div> 
+        <button id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>We are a group of photography enthusiasts. Even though we only use our smartphones, we strive to produce the best photos.</p>
+      </div>
+    </section>
+
+    <section id="gallery" class="gallery">
+      <div class="container">
+        <h2>Gallery</h2>
+        <div class="filter-btns">
+          <button data-filter="all">All</button>
+          <button data-filter="nature">Nature</button>
+          <button data-filter="sunset">Sunset</button>
+          <button data-filter="urban">Urban</button>
+          <button data-filter="animal">Animal</button>
+        </div>
+
+        <div class="sort-select">
+          <label for="sort">Sort By: </label>
+          <select id="sort">
+            <option value="newest">Newest</option>
+            <option value="oldest">Oldest</option>
+            <option value="popular">Most Popular</option>
+          </select>
+        </div>
+
+        <div class="gallery-masonry" id="galleryContainer">
+          <div class="gallery-item" data-date="2025-06-10" data-likes="10" data-tags="nature">
+            <img src="img/cemara.jpg" alt="Cemara">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#nature #sunset</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-02" data-likes="10" data-tags="animal">
+            <img src="img/ikan.jpg" alt="Ikan">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#animal</div>
+          </div>
+          <div class="gallery-item" data-date="2025-05-30" data-likes="10" data-tags="urban">
+            <img src="img/stasiun.jpg" alt="Stasiun">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-17" data-likes="10" data-tags="urban">
+            <img src="img/spbu.jpg" alt="SPBU">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-17" data-likes="10" data-tags="urban">
+            <img src="img/motormalam.jpg" alt="Motor Malam">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-28" data-likes="10" data-tags="animal">
+            <img src="img/kucinggg.jpg" alt="Kucing">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#animal</div>
+          </div>
+          <div class="gallery-item" data-date="2024-06-17" data-likes="10" data-tags="urban">
+            <img src="img/pasarsimo.jpg" alt="Pasar Simo">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2024-06-02" data-likes="10" data-tags="urban">
+            <img src="img/pasarklewer.jpg" alt="Pasar Klewer">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-05-26" data-likes="10" data-tags="urban">
+            <img src="img/trikopi.jpg" alt="Trikopi">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-13" data-likes="10" data-tags="urban">
+            <img src="img/bangjohokben.jpg" alt="Bang Jo Hok Ben">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-10" data-likes="10" data-tags="urban">
+            <img src="img/masjidtw.jpg" alt="Masjidtw">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          <div class="gallery-item" data-date="2025-06-17" data-likes="10" data-tags="urban">
+            <img src="img/spbult.jpg" alt="SPBU LT">
+            <button class="like-btn">❤️ <span class="like-count">10</span></button>
+            <div class="tags">#urban</div>
+          </div>
+          
+        </div>
+
+        <div class="load-more-container">
+          <button id="loadMore">Load More</button>
+        </div>
+      </div>
+    </section>
+
+    
+<section id="preset" class="preset">
+  <div class="container">
+    <h2>Free Presets</h2>
+    <div class="preset-grid">
+      <div class="preset-card" data-before="img/before.jpg" data-after="img/analoggg.jpg" data-description="(before/after)adjust to your photo.">
+        <img src="img/analoggg.jpg" alt="Analog Dreamy">
+        <h4>Analog Dreamy</h4>
+        <a href="https://drive.google.com/drive/folders/1W8aSjTqUvDwYbgGEpjF87ygnN3l_bJpb" target="_blank">Download</a>
+        <button class="preview-btn">👁️ Preview</button>
+      </div>
+      <div class="preset-card" data-before="img/before.jpg" data-after="img/fujifilm.jpg" data-description="(before/after)adjust to your photo.">
+        <img src="img/fujifilm.jpg" alt="Fujifilm Look">
+        <h4>Fujifilm Look</h4>
+        <a href="https://drive.google.com/drive/folders/1WIK7ltg5YkWL1nBRDj9pOvmKYsS-c6in" target="_blank">Download</a>
+        <button class="preview-btn">👁️ Preview</button>
+      </div>
+    </div>
+  </div>
+</section>
+ </main>
+
+  <footer id="contact" class="footer">
+    <p>Instagram: <a href="https://instagram.com/2oosos" target="_blank">@2oosos</a></p>
+    <p id="quote"></p>
+  </footer>
+
+  <!-- Musik & Toggle -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="audio/lofi.mp3" type="audio/mp3">
+  </audio>
+  <button id="toggleMusic" class="music-toggle">🔊</button>
+
+<!-- Modal Preview dengan Before/After -->
+<div id="presetModal" class="modal">
+  <div class="modal-content">
+    <span class="modal-close">&times;</span>
+    
+    <div class="ba-container">
+      <div class="ba-wrapper">
+        <img src="" alt="Before" id="beforeImg">
+        <div class="after-wrapper" id="afterWrapper">
+          <img src="" alt="After" id="afterImg">
+        </div>
+      </div>
+      <input type="range" min="0" max="100" value="50" id="baSlider">
+    </div>
+
+    <p id="modalText"></p>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
