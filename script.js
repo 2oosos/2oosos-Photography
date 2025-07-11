@@ -332,3 +332,8 @@ imageModal.addEventListener("click", (e) => {
     imageModal.style.display = "none";
   }
 });
+
+// === GLITCH MODE ===
+document.getElementById("glitchToggle").onclick = () => {
+  document.body.classList.toggle("glitch-mode");
+};
