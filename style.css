@@ -466,10 +466,10 @@ body.crt .preset-card a:hover {
 
 
 /* === RESPONSIVE === */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .gallery-masonry {
     column-count: 2;
-  }
+  } */
   .nav-links {
     display: none;
     flex-direction: column;
@@ -486,12 +486,12 @@ body.crt .preset-card a:hover {
   #menuToggle {
     display: block;
   }
-}
-@media (max-width: 480px) {
+
+/* @media (max-width: 480px) {
   .gallery-masonry {
     column-count: 1;
   }
-}
+} */
 
 .music-toggle {
   position: fixed;
@@ -677,3 +677,64 @@ body.crt .preset-card a:hover {
 }
 
 
+/* === NEW GALLERY GRID === */
+.gallery-masonry {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 8px;
+}
+
+/* Pastikan gambar penuh kotak */
+.gallery-item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Modal Lightbox */
+.image-modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0; top: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+.image-modal img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.5);
+  animation: fadeIn 0.3s ease;
+}
+
+.image-modal .close-btn {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive grid gaps */
+@media (max-width: 768px) {
+  .gallery-masonry {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+}
+@media (max-width: 480px) {
+  .gallery-masonry {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+}
