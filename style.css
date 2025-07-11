@@ -28,6 +28,22 @@ a {
   z-index: 9999;
 }
 
+/* === GLITCH MODE === */
+.glitch-mode h1,
+.glitch-mode h2,
+.glitch-mode .logo,
+.glitch-mode .gallery-item img {
+  animation: glitch 0.3s infinite;
+}
+@keyframes glitch {
+  0% { transform: translate(0, 0); }
+  20% { transform: translate(-1px, 1px) skewX(5deg); }
+  40% { transform: translate(1px, -2px) skewY(-5deg); }
+  60% { transform: translate(-3px, 1px); }
+  80% { transform: translate(2px, -1px); }
+  100% { transform: translate(0, 0); }
+}
+
 /* === HEADER & NAVIGATION === */
 .header {
   background-color: white;
