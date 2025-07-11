@@ -310,3 +310,25 @@ document.querySelectorAll(".nav-links a").forEach(link => {
     }
   });
 });
+
+// === IMAGE MODAL ===
+const imageModal = document.getElementById("imageModal");
+const modalImage = document.getElementById("modalImage");
+const closeBtn = document.querySelector(".image-modal .close-btn");
+
+document.querySelectorAll(".gallery-item img").forEach(img => {
+  img.addEventListener("click", () => {
+    modalImage.src = img.src;
+    imageModal.style.display = "flex";
+  });
+});
+
+closeBtn.addEventListener("click", () => {
+  imageModal.style.display = "none";
+});
+
+imageModal.addEventListener("click", (e) => {
+  if (e.target === imageModal) {
+    imageModal.style.display = "none";
+  }
+});
